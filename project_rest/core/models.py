@@ -6,13 +6,13 @@ from django.contrib.auth.models import AbstractUser
    # lap_top='lap_top'
    # tools='tools'
 
-#class Product(models.Model):
-   # name=models.CharField(max_length=20,blank=False)
-   # price=models.DecimalField(decimal_places=2,max_digits=10)
- #   category=models.CharField(max_length=40,choices=Category.choices)
-  #  user=models.ForeignKey(User,null=True,on_delete=models.SET_NULL)
-  #  def __str__(self):
-   #     return self.name
+class Product(models.Model):
+    name=models.CharField(max_length=20,blank=False)
+    price=models.DecimalField(decimal_places=2,max_digits=10)
+    category=models.CharField(max_length=40,choices=Category.choices)
+    user=models.ForeignKey(User,null=True,on_delete=models.SET_NULL)
+    def __str__(self):
+        return self.name
 gender=(
 ("male","male"),
 ("female","female"),
