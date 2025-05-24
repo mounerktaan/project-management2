@@ -1,10 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-# Create your models here.
-#class Category(models.TextChoices):
-   # mobile='mobile'
-   # lap_top='lap_top'
-   # tools='tools'
+ Create your models here.
+class Category(models.TextChoices):
+    mobile='mobile'
+    lap_top='lap_top'
+    tools='tools'
 
 class Product(models.Model):
     name=models.CharField(max_length=20,blank=False)
